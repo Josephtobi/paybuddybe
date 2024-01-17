@@ -1,18 +1,18 @@
 databases:
-  - name: ml_django
-    databaseName: ml_django
-    user: ml_django
+  - name: paybuddybe
+    databaseName: paybuddybe
+    user: paybuddybe
 
 services:
   - type: web
-    name: ml_django
+    name: paybuddybe
     runtime: python
     buildCommand: "./build.sh"
-    startCommand: "gunicorn ml_django.wsgi:application"
+    startCommand: "gunicorn paybuddybe.wsgi:application"
     envVars:
       # - key: DATABASE_URL
       #   fromDatabase:
-      #     name: ml_django
+      #     name: paybuddybe
       #     property: connectionString
       - key: SECRET_KEY
         generateValue: true

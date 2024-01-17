@@ -44,7 +44,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'base',
+    'rest_framework',
+    'drf_yasg',
+    'users',
+
 ]
 
 MIDDLEWARE = [
@@ -58,7 +61,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'ml_django.urls'
+ROOT_URLCONF = 'paybuddybe.urls'
 
 TEMPLATES = [
     {
@@ -76,7 +79,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'ml_django.wsgi.application'
+WSGI_APPLICATION = 'paybuddybe.wsgi.application'
 
 
 # Database
