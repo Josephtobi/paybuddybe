@@ -7,7 +7,7 @@ url = "https://paybuddydb-marp.harperdbcloud.com"
 
 headers = {
     'Content-Type': 'application/json',
-    'Authorization': os.environ['db_auth']
+    # 'Authorization': os.environ['db_auth']
 }
 
 
