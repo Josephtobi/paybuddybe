@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "ml-django"
+version = "0.1.0"
+description = ""
+authors = ["Josephtobi <josephtobi53@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django = "^5.0.1"
+whitenoise = {extras = ["brotli"], version = "^6.6.0"}
+gunicorn = "^21.2.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
