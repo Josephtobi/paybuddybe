@@ -6,7 +6,7 @@ import json
 from . import serializers, tokens
 from drf_yasg import openapi
 from drf_yasg.utils import swagger_auto_schema
-from .db import reg, check_user, fetch_user
+from .db import *
 from django.contrib.auth.hashers import check_password
 
 
@@ -43,7 +43,7 @@ def login(request):
     body = json.loads(request.body)
     serializer = serializers.LoginSerializer(data=body)
     if serializer.is_valid():
-        a = check_user(body)
+        a = login_user(body)
         if a:
             access = tokens.Accesstoken(body['email'])
             # refresh = tokens.Refreshtoken(body['email'])
