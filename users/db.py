@@ -54,7 +54,7 @@ def search(data):
 
 def reg(data):
     res = search({'email': data['email']})
-    if res == None:
+    if res == None or res['document'] == None:
 
         payload = {
             'email': data['email'],
